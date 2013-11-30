@@ -1,4 +1,7 @@
-Add your own 'FYFKeys.h' file for:
+Create your own project.
+Install the pods, this will create a workspace to use going forward.
+
+Add a 'FYFKeys.h' file:
 
 #define MINOR_109_BLACK 109
 #define MINOR_114_PINK 114
@@ -23,6 +26,8 @@ Uses Parse
 - for Cloud Cloud feature to keep a log of push notifications
 
 To do
+- add xc tests
+- add comments for doxygen
 - add beacon recognition and advertising 
 - recognize a beacon and then send a Push from the device to people nearby with same preference
 - recognize a beacon for 'goodby' message/survey
