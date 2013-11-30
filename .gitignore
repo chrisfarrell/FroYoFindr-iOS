@@ -2,7 +2,6 @@
 *.xcodeproj/
 *.xcworkspace/
 FroYoFindrCloudCode/
-Podfile.lock
 PushSharedLearning-Blurb.txt
 FroYoFindr/FYFKeys.h
 Pods/
