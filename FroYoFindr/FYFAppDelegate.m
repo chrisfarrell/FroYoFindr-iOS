@@ -9,12 +9,17 @@
 #import "FYFAppDelegate.h"
 #import "FYFLocationManager.h"
 #import "FYFKeys.h"
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
 
 @implementation FYFAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    
     [TestFlight takeOff:TESTFLIGHT_KEY];
     
     [Parse setApplicationId:PARSE_APP_ID
