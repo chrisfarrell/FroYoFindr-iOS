@@ -15,16 +15,28 @@
 @property (strong, nonatomic) UIWindow *window;
 
 /**
- Stores channels array from remote notification.
- Since app is active, we have to prompt the user manually with an alert.
- After user interacts with the alert, we need to display the correct view.
+ Stores flavor array passed in with remote notification.
+ When app is active, we prompt the user manually with an alert.
+ So,after user interacts with the alert, we need to display the correct view for the flavor passed in.
  */
 @property (strong, nonatomic) NSArray* remoteNotificationFlavors;
 
+/**
+	Flag for whether or not the recieved push is from a client, rather than from Parse.
+ */
 @property (assign)int isClientPush;
 
+
+/**
+	View controller used to display an appropriate image based on flavor passed in with push.
+ */
 @property (strong, nonatomic) FYFDeepLinkViewController* modal;
 
+
+/**
+	App uses tabbed navigation.
+ */
 @property (strong, nonatomic) UITabBarController *tabBarController;
+
 
 @end

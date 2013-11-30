@@ -11,7 +11,6 @@
 #import "FYFLocationDetailViewController.h"
 #import <MapKit/MapKit.h>
 
-
 @interface FYFFirstViewController ()
 
 @end
@@ -124,7 +123,7 @@
 //                    
 //                    //[[item placemark] addressDictionary];
 //                    //[[item placemark] ];
-//                    NSLog(@"Name: %@", [item name] );
+//                    DDLogVerbose(@"Name: %@", [item name] );
 //                    FYFMapPin* pin = [[FYFMapPin alloc] initWithCoordinates:[item.placemark coordinate]
 //                                                                  placeName:[item name]
 //                                                                description:[item description]
@@ -135,7 +134,7 @@
 //            }
 //            
 
-            NSLog(@"Name: %@", [item name] );
+            DDLogVerbose( @"Name: %@", [item name] );
             FYFMapPin* pin = [[FYFMapPin alloc] initWithCoordinates:[item.placemark coordinate]
                                                           placeName:[item name]
                                                         description:[item description]
@@ -161,11 +160,11 @@
     /*
     if ([sourceViewController isKindOfClass:[BlueViewController class]])
     {
-        NSLog(@"Coming from BLUE!");
+        DDLogVerbose(@"Coming from BLUE!");
     }
     else if ([sourceViewController isKindOfClass:[GreenViewController class]])
     {
-        NSLog(@"Coming from GREEN!");
+        DDLogVerbose(@"Coming from GREEN!");
     }
      */
 }

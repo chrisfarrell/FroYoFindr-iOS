@@ -16,7 +16,7 @@
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
-    NSLog(@"initWithCoder");
+    DDLogVerbose(@"initWithCoder");
     
     self = [super initWithCoder: aDecoder];
     if (self)

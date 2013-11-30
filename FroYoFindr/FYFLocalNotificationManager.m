@@ -33,7 +33,7 @@
 {
     
     if(!_clientPushNotificationSent){
-        NSLog(@"First Notification");
+        DDLogVerbose(@"First Notification");
         _clientPushNotificationSent = YES;
         UILocalNotification* localNotification = [[UILocalNotification alloc] init];
         localNotification.alertBody = @"Tell others nearby know how cool this is!";
@@ -50,7 +50,7 @@
 {
     
     if(!_goodByeSurveyNotificationSent){
-        NSLog(@"Goodbye/Survey Notification");
+        DDLogVerbose(@"Goodbye/Survey Notification");
         
         _goodByeSurveyNotificationSent = YES;
         UILocalNotification* localNotification = [[UILocalNotification alloc] init];

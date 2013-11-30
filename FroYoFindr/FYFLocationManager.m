@@ -305,10 +305,10 @@
 
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        NSLog(@"Powered On");
+        DDLogVerbose(@"Powered On");
         [self.peripheralManager startAdvertising:self.beaconPeripheralData];
     } else if (peripheral.state == CBPeripheralManagerStatePoweredOff) {
-        NSLog(@"Powered Off");
+        DDLogVerbose(@"Powered Off");
         [self.peripheralManager stopAdvertising];
     }
 }
@@ -322,7 +322,7 @@
     [geoCoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
         for (CLPlacemark * placemark in placemarks) {
             
-            NSLog(@"didUpdateToLocation Locality = %@", placemark.locality);
+            DDLogVerbose(@"didUpdateToLocation Locality = %@", placemark.locality);
             
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
             NSString* storedLocality = [defaults stringForKey:LOCALITY];
@@ -355,7 +355,7 @@
 
 - (void) locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
 {
-    NSLog(@"didDetermineState");
+    DDLogVerbose(@"didDetermineState");
     
     switch (state) {
         case CLRegionStateInside:
@@ -382,7 +382,7 @@
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region {
     
-    //NSLog(@"didRangeBeacons");
+    //DDLogVerbose(@"didRangeBeacons");
     
     //can have different courses for bg/fg.
     //UIApplicationState state = [[UIApplication sharedApplication] applicationState];
@@ -396,7 +396,7 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region {
-    //NSLog(@"didStartMonitoringForRegion");
+    //DDLogVerbose(@"didStartMonitoringForRegion");
     
     [self.locationManager startRangingBeaconsInRegion:self.roxBeaconRegion];
     [self.locationManager requestStateForRegion:self.roxBeaconRegion];

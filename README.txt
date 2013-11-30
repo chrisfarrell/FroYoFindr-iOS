@@ -1,24 +1,27 @@
-Create your own project.
+Create your own project for this code.
 Install the pods, this will create a workspace to use going forward.
+$ pod install
 
 Add a 'FYFKeys.h' file:
 
-#define MINOR_109_BLACK 109
-#define MINOR_114_PINK 114
+    #define MINOR_109_BLACK 109
+    #define MINOR_114_PINK 114
 
-#define PARSE_APP_ID @"your_key"
-#define PARSE_CLIENT_KEY @"your_key"
-#define TESTFLIGHT_KEY @"your_key"
+    #define PARSE_APP_ID @"your_key"
+    #define PARSE_CLIENT_KEY @"your_key"
+    #define TESTFLIGHT_KEY @"your_key"
 
-#define ROXIMITY_UUID    @"your_key"
-#define ROX_BEACON_ID    @"com.your.id"
+    #define ROXIMITY_UUID    @"your_key"
+    #define ROX_BEACON_ID    @"com.your.id"
 
-#define APP_UUID         @"your_key"
-#define FYF_BEACON_ID    @"com.your.id"
+    #define APP_UUID         @"your_key"
+    #define FYF_BEACON_ID    @"com.your.id"
+
 
 Uses Cocoapods for
  - Testflight
  - Parse
+ - CocoaLumberjack
 
 Uses Parse
 - to store preferences and locality

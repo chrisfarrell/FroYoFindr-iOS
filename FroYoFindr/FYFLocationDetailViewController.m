@@ -34,7 +34,7 @@
     
     if([self.annotation respondsToSelector:@selector(descriptionDetail)]){
         //NSString *desc = [self.annotation descriptionDetail];
-        //NSLog(@"description: %@", desc);
+        //DDLogVerbose(@"description: %@", desc);
         [self.labelOutlet setText:[self.annotation title]];
        // [self.textView setText:desc];
         [self.detailWebView loadRequest:[NSURLRequest requestWithURL:[self.annotation url]]];
